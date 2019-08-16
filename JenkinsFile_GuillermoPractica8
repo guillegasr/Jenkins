@@ -1,0 +1,8 @@
+node{
+    stage "Backup"
+    mydate=print new Date().format( 'yyyyMMdd' )    
+    bat ("md C:\\Users\\Academia\\Documents\\DevOps\\Jenkins\\RepoKarla\\Jenkins2_"+mydate)
+    bat ("copy C:\\Users\\Academia\\Documents\\DevOps\\Jenkins\\RepoKarla\\Jenkins C:\\Users\\Academia\\Documents\\DevOps\\Jenkins\\RepoKarla\\Jenkins2_"+mydate)
+    bat ("compact C:\\Users\\Academia\\Documents\\DevOps\\Jenkins\\RepoKarla\\Jenkins2_"+mydate)
+    bat ("move C:\\Users\\Academia\\Documents\\DevOps\\Jenkins\\RepoKarla\\Jenkins2_$mydate C:\\Users\\Academia\\Documents\\DevOps\\Jenkins\\")
+}
